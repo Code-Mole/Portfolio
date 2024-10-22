@@ -6,45 +6,50 @@ import CallIcon from '@mui/icons-material/Call';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-12 mb-20 bg-gray-100 shadow-lg rounded-lg ">
+    <section id="contact" className="py-12 mb-20 dark:bg-slate-800 mt-10 bg-gray-100 shadow-lg rounded-lg ">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold">Get in Touch</h2>
+        <h2 className="text-3xl font-bold dark:text-slate-400">Get in Touch</h2>
         <div className="w-20 h-1 bg-indigo-200 rounded-full mx-auto mb-10 relative top-2"></div>
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 dark:text-slate-500 text-gray-600">
           I’m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
         </p>
 
         <div className="mt-8 max-w-xl mx-auto">
-          <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST" className="space-y-4">
+          <form className="space-y-4">
             <div className="flex flex-col">
-              <label htmlFor="name" className="text-left font-medium">Name</label>
+              <label htmlFor="name" className="text-left font-medium dark:text-slate-200 ml-6">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="mt-2 p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" focus:ring-offset-4 ring-offset-transparent mt-2 p-3 dark:bg-slate-600 dark:border-none mx-5 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your name"
                 required
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="email" className="text-left font-medium">Email</label>
+              <label htmlFor="email" className="text-left font-medium dark:text-slate-200 ml-6">Email</label>
               <input
                 type="email"
                 id="email"
                 name="_replyto"
-                className="mt-2 p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 p-3 rounded-md border border-gray-300
+                dark:bg-slate-600 dark:border-none mx-5 
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-4 ring-offset-transparent "
+                
                 placeholder="Your email"
                 required
               />
             </div>
             <div className="flex flex-col">
-              <label htmlFor="message" className="text-left font-medium">Message</label>
+              <label htmlFor="message" className="text-left font-medium dark:text-slate-200 ml-6 " >Message</label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
-                className="mt-2 p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className=" focus:ring-offset-4 ring-offset-transparent  placeholder:text-slate-400 mt-2 p-3 rounded-md border border-gray-300 
+                dark:bg-slate-600 dark:border-none mx-5
+                focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Your message"
                 required
               ></textarea>
@@ -52,7 +57,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all duration-300"
+                className="w-[92%] m-5 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all  duration-300"
               >
                 Send Message
               </button>
@@ -60,7 +65,7 @@ const Contact = () => {
           </form>
 
           <div className="mt-8">
-            <h3 className="text-xl font-bold">Connect with me</h3>
+            <h3 className="text-xl font-bold dark:text-slate-400">Connect with me</h3>
             <div className="flex justify-center space-x-6 mt-4">
               <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
                 <GitHubIcon className="fab fa-github text-2xl text-gray-800 hover:text-blue-500"></GitHubIcon>
@@ -69,14 +74,14 @@ const Contact = () => {
                 <LinkedInIcon className="fab fa-linkedin text-2xl text-blue-700 hover:text-blue-500"></LinkedInIcon>
               </a>
               <a href="https://twitter.com/yourtwitter" target="_blank" rel="noopener noreferrer">
-                <XIcon className="fab fa-twitter text-2xl text-blue-500 hover:text-blue-600"></XIcon>
+                <XIcon className="fab fa-twitter text-2xl text-blue-700 hover:text-blue-500"></XIcon>
               </a>
               <a href="mailto:youremail@example.com">
-                <EmailIcon className="fas fa-envelope text-2xl text-gray-600 hover:text-blue-500"></EmailIcon>
+                <EmailIcon className="fas fa-envelope text-2xl text-blue-700 hover:text-blue-500"></EmailIcon>
               </a>
             </div>
-            <h1 className='font-semibold mt-4 font-serif'>OR</h1>
-            <p>
+            <h1 className='font-semibold mt-4 font-serif dark:text-slate-400'>OR</h1>
+            <p className='dark:text-slate-500'>
               <CallIcon></CallIcon> : +233542369646/+233503822323
             </p>
           </div>

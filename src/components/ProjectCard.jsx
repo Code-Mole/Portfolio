@@ -1,4 +1,3 @@
-import React from "React"
 
 const ProjectCard = ({project})=>{
     return(

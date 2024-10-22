@@ -14,7 +14,7 @@ const Navbar = () => {
     } else {
       document.documentElement.classList.remove('dark');
     }
-    localStorage.setItem('theme', theme); // Persist the theme in localStorage
+    localStorage.setItem('theme', theme); 
   }, [theme]);
 
   const toggleTheme = () => {
@@ -23,44 +23,46 @@ const Navbar = () => {
   };
 
     return (
-      <>
-      <nav className="bg-slate-200 p-4 fixed w-full md:px-40 z-10  ">
+   
+      <nav className=" bg-slate-200 dark:bg--600 p-4 fixed w-full md:px-40 z-10  ">
       
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-slate-600 text-2xl font-bold">Code-Mole</div>
+          <div className="text-slate-600 text-2xl font-bold cursor-pointer">Code-Mole</div>
           <HamburgerMenu />
           <div className="hidden md:flex space-x-4">
+          <a href='/'>
             <Link to="hereSection" 
             activeClass="active"
             spy={true}
             smooth={true}
             offset={-70} 
             duration={500}
-            className="text-gray-400 hover:text-slate-600 active:text-violet-700 ">Home</Link>
-            <Link to="about" 
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-             className="text-gray-400 hover:text-slate-600">About</Link>
-           
-            <Link to="testimonial"  spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500} className="text-gray-400 hover:text-slate-600">Projects</Link>
+            className="text-gray-400 hover:text-slate-600 active:text-violet-700 cursor-pointer">Home</Link>
+            </a>
+            <a href="/about"  >
+              <Link to="about" 
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="text-gray-400 hover:text-slate-600 cursor-pointer">About</Link>
+           </a>
+            <a href="/projects"   className="text-gray-400 hover:text-slate-600">Projects</a>
+            <a href='/contact'>
             <Link to="contact"  
              spy={true}
              smooth={true}
              offset={-70}
              duration={500}
-            className="text-gray-400 hover:text-slate-600">Contact</Link>
+            className="text-gray-400 hover:text-slate-600 cursor-pointer">Contact</Link>
+            </a>
           {
             themeIcon ? <DarkModeIcon onClick={toggleTheme} className="text-gray-900 hover:text-slate-600"/> : <LightModeIcon onClick={toggleTheme} className="text-yellow-400 hover:text-slate-600"/>
           }
           </div>
         </div>
       </nav>
-      </>
+      
     );
   };
   
