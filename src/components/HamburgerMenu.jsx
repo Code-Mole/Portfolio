@@ -67,16 +67,7 @@ const HamburgerMenu = () => {
         >
           About
         </Link>
-        <Link
-          to="services"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          onClick={toggleMenu}
-          className="text-2xl cursor-pointer hover:text-slate-600"
-        >
-          Projects
-        </Link>
+        <a href="/projects"   className="text-2xl cursor-pointer hover:text-slate-600">Projects</a>
         <Link
           to="contact"
           smooth={true}

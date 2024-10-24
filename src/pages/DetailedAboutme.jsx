@@ -1,9 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 const DetailedAboutme = () => {
     return (
       <>
       <a href="/">Go Back</a>
       <section id="" className="py-12  text-center">
-        <div className="container mx-auto shadow-lg rounded-lg  bg-gray-100 relative">
+        <div className="container mx-auto shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative">
           <h2 className="text-5xl mb-10 font-bold">About Me</h2>
           <div className="w-20 h-1 bg-indigo-200 rounded-full mx-auto mb-10 relative bottom-6"></div>
           <p className="mt-4 max-w-2xl md:max-w-6xl mx-auto md:text-xl text-gray-500 text-left">
@@ -12,12 +14,13 @@ const DetailedAboutme = () => {
             <span className="inline-block mb-5 ">Thanks to Juno's guidance, I learned how to effectively showcase my projects, skills, and experiences, allowing me to connect with potential employers and ultimately land my dream role at Rose Rocket. It’s been an incredible journey of growth, both technically and professionally, and I’m excited to continue expanding my knowledge in infrastructure and backend systems.</span>
             <span className="inline-block mb-5 ">I’m committed to continuously improving and contributing to innovative projects that push the boundaries of technology, while also sharing my story and helping others along the way.</span>
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex gap-10 pl-10 md:pl-44">
             <img
-              className=" mb-14 rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg"
-              src="/mole.jpg"
+              className=" mb-14 rounded-2xl w-40 h-60 md:w-80 md:h-96 object-cover shadow-lg hover:shadow-slate-500"
+              src="/mole1.JPG"
               alt="Asanga Emmanuel"
             />
+          <Outlet />
           </div>
         </div>
       </section>

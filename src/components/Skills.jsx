@@ -25,7 +25,7 @@ const Skills = () => {
         <div className="w-20 h-1 bg-indigo-200 rounded-full mx-auto mb-10 relative bottom-6"></div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {skills.map((skill) => (
-            <div key={skill.name} className="p-6 dark:bg-slate-700 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 animate-bounce">
+            <div key={skill.name} className="p-6 dark:bg-slate-700 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 animate-bounce hover:shadow-slate-500">
               <div className="flex justify-center items-center text-5xl mb-4">
                
                 <div className='animate-spin font-semibold text-slate-300'>{skill.icon}</div>

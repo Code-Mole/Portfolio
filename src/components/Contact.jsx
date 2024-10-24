@@ -68,7 +68,7 @@ const Contact = () => {
             <h3 className="text-xl font-bold dark:text-slate-400">Connect with me</h3>
             <div className="flex justify-center space-x-6 mt-4">
               <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
-                <GitHubIcon className="fab fa-github text-2xl text-gray-800 hover:text-blue-500"></GitHubIcon>
+                <GitHubIcon className="fab fa-github text-2xl text-blue-700 hover:text-blue-500"></GitHubIcon>
               </a>
               <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon className="fab fa-linkedin text-2xl text-blue-700 hover:text-blue-500"></LinkedInIcon>
