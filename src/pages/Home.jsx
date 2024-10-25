@@ -12,7 +12,7 @@ function Home() {
     <>
     <Navbar/>
     <div className="scroll-smooth bg-gray-100 dark:bg-slate-900 flex  justify-center items-center   text-center">
-      <div className="w-[90%] mx-auto">
+      <div className="w-[98%] md:w-[90%] mx-auto">
         {/* Sections */}
         <HeroSection />
         <About />
