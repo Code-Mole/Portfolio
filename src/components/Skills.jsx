@@ -5,16 +5,16 @@ import HtmlIcon from '@mui/icons-material/Html';
 // }
 
 const skills = [
-  { name: "HTML", level: "90%", icon:<HtmlIcon/> , color: "bg-red-500" },
-  { name: "CSS", level: "85%", icon: <HtmlIcon/>, color: "bg-blue-500" },
-  { name: "JavaScript", level: "95%", icon: <HtmlIcon/>, color: "bg-yellow-500" },
-  { name: "React", level: "90%", icon: <HtmlIcon/>, color: "bg-blue-400" },
-  { name: "Node.js", level: "85%", icon: <HtmlIcon/>, color: "bg-green-500" },
-  { name: "Express.js", level: "80%", icon: <HtmlIcon/>, color: "bg-gray-800" },
-  { name: "MySQL", level: "90%", icon: <HtmlIcon/>, color: "bg-blue-600" },
-  { name: "MongoDB", level: "88%", icon: <HtmlIcon/>, color: "bg-green-700" },
-  { name: "Python", level: "70%", icon: <HtmlIcon/>, color: "bg-yellow-700" },
-  { name: "Photoshop", level: "75%", icon: <HtmlIcon/>, color: "bg-stone-500" },
+  { name: "HTML", level: "90%", icon:"/html5.png", color: "bg-red-500" },
+  { name: "CSS", level: "85%", icon:"/css-3.png", color: "bg-blue-500" },
+  { name: "JavaScript", level: "95%", icon: "/javascript.png", color: "bg-yellow-500" },
+  { name: "React", level: "90%", icon: "/physics.png", color: "bg-blue-400" },
+  { name: "Node.js", level: "85%", icon: "/nodejs.png", color: "bg-green-500" },
+  { name: "Express.js", level: "80%", icon: "/express.png", color: "bg-gray-800" },
+  { name: "MySQL", level: "90%", icon: "/mysql.png", color: "bg-blue-600" },
+  { name: "MongoDB", level: "88%", icon: "database.png", color: "bg-green-700" },
+  { name: "Python", level: "70%", icon: "python.png", color: "bg-yellow-700" },
+  { name: "Photoshop", level: "75%", icon:"photoshop.png", color: "bg-stone-500" },
 ];
 
 const Skills = () => {
@@ -28,7 +28,9 @@ const Skills = () => {
             <div key={skill.name} className="p-6 dark:bg-slate-700 bg-white shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300 animate-bounce hover:shadow-slate-500">
               <div className="flex justify-center items-center text-5xl mb-4">
                
-                <div className='animate-spin font-semibold text-slate-300'>{skill.icon}</div>
+                <div className='animate-spin font-semibold text-slate-300 rounded-full'>
+                  <img className=' rounded-full w-10 h-10' src={skill.icon} alt="" />
+                </div>
               </div>
               <h3 className="text-xl font-semibold dark:text-slate-200 mb-4">{skill.name}</h3>
               <div className="relative h-2 bg-gray-300 rounded-full overflow-hidden">

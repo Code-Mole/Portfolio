@@ -24,12 +24,12 @@ const HeroSection = () => {
       I craft innovative, scalable digital solutions designed to optimize business performance and elevate user engagement. My expertise ensures seamless integration of functionality and design, delivering measurable results that drive growth and efficiency.
       </p>
       <div className="mt-8">
-        <a href="#projects" className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">View My Work</a>
-        <a href="#contact" className=" ml-4 px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white ">Hire Me</a>
-        <a href="/moleResume.pdf" className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md ml-4 hover:bg-blue-600">Download CV</a>
+        <a href="/projects" className="px-4 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">View My Work</a>
+        <a href="#contact" className=" ml-2 px-4 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white ">Hire Me</a>
+        <a href="/moleResume.pdf" className="px-4 py-3 bg-blue-500 text-white rounded-lg shadow-md ml-2 hover:bg-blue-600">Download CV</a>
       </div></div>
       <div className="">
-        <img src="/mole5.jpg" alt="Asanga Emmanuel" className="animate-pulse  w-48 h-48 md:h-[55vh] md:w-[25rem] rounded-3xl mt-8" />
+        <img src="/mole5.jpg" alt="Asanga Emmanuel" className="animate-pulse  w-48 h-48 md:h-[55vh] md:w-[25rem] rounded-3xl mt-8 hover:shadow-slate-400 hover:shadow-2xl" />
       </div>
       
     </div>

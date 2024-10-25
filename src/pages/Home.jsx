@@ -19,7 +19,6 @@ function Home() {
         <Skills/>
         <Testimonial/>
         <Contact/>
-
      </div>
   </div>
   </>

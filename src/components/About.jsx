@@ -12,7 +12,7 @@ const About = () => {
           </p>
           <div className="mt-8 flex justify-center ">
             <img
-              className=" mb-20 rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg hover:animate-spin"
+              className="hover:shadow-slate-400 mb-20 rounded-full w-64 h-64 md:w-80 md:h-80 object-cover hover:shadow-2xl hover:animate-spin"
               src="/mole.jpg"
               alt="Asanga Emmanuel"
             />

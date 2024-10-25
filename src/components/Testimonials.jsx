@@ -12,26 +12,26 @@ function Testimonials() {
     {
       name: "CodingBa",
       job: "CEO, Botech development 360",
-      avatar: "/jane.jpg",
+      avatar: "/codingba.jpg",
       text: "Working with Asanga was a pleasure. He delivered top-notch code and was always proactive.",
     },
     {
       name: "Addo Michael ",
       job: "works in Botech development 360",
-      avatar: "/mike.mhtml",
-      text: "Emmanuel Asanga has this collabrative abilities. He makes his intention known and clear. He is cool to work with.",
+      avatar: "/mike.jpg",
+      text: "Emmanuel Asanga ability to pick up new technologies and implement them efficiently is truly impressive. He took on a challenging project where he used React, Node.js, and MongoDB to build a complex dashboard. His attention to detail and focus on delivering a flawless user experience made the final product outstanding.",
     },
     {
-      name: "raff ",
-      job: "works in Botech development 360",
+      name: "Punobyin Raphael Tibil ",
+      job: "Course mate",
       avatar: "/raff.JPG",
-      text: "Emmanuel Asanga has this collabrative abilities. He makes his intention known and clear. He is cool to work with.",
+      text: "Working with Asanga has been an absolute pleasure. His attention to detail and dedication to delivering high-quality solutions are second to none. He helped us build a responsive, user-friendly platform that exceeded our expectations. His ability to problem-solve and think critically is a major asset, and we can't wait to collaborate with him on future projects.",
     },
     {
-      name: "Ernest ",
-      job: "works in Botech development 360",
+      name: "Bawa Ernest Kwame",
+      job: "Team mate",
       avatar: "/ernest.JPG",
-      text: "Emmanuel Asanga has this collabrative abilities. He makes his intention known and clear. He is cool to work with.",
+      text: "Asanga played a key role in optimizing our web infrastructure. His expertise in Node.js and MongoDB ensured that our backend systems ran seamlessly, even under high traffic. His proactive approach and eagerness to tackle challenges head-on made him an invaluable part of our team.",
     },
   ];
   return (

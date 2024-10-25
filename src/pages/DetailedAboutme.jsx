@@ -1,30 +1,59 @@
 import { Outlet } from "react-router-dom";
+import { useState,useEffect } from "react";
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import AboutNavbar from "../components/AboutNavbar";
 
 const DetailedAboutme = () => {
+
+  const [themeIcon,setThemeIcon] = useState(false);
+   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+   useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme); // Persist the theme in localStorage
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+    setThemeIcon(!themeIcon)
+  };
     return (
-      <>
-      <a href="/">Go Back</a>
-      <section id="" className="py-12  text-center">
-        <div className="container mx-auto shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative">
-          <h2 className="text-5xl mb-10 font-bold">About Me</h2>
+        <div className="container mx-auto shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative py-12">
+        <div className="px-10 md:px-28  flex justify-between items-center">
+      <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110">Go Back</a>
+      <div>
+      {
+            themeIcon ? <DarkModeIcon onClick={toggleTheme} className="text-gray-900 hover:text-slate-600"/> : <LightModeIcon onClick={toggleTheme} className="text-yellow-400 hover:text-slate-600"/>
+          }
+      </div>
+      </div>
+          <h2 className="text-5xl mb-10 font-bold text-center dark:text-slate-400">About Me</h2>
           <div className="w-20 h-1 bg-indigo-200 rounded-full mx-auto mb-10 relative bottom-6"></div>
-          <p className="mt-4 max-w-2xl md:max-w-6xl mx-auto md:text-xl text-gray-500 text-left">
-            <span className="inline-block mb-5 ">I’m currently working as a Junior Software Engineer (Infrastructure) at Rose Rocket, where I specialize in building and maintaining the core infrastructure that powers logistics technology. My role involves optimizing system performance, ensuring high availability, and collaborating with cross-functional teams to deliver scalable, reliable solutions that support complex business needs.</span>
-            <span className="inline-block mb-5 ">My journey began with a passion for software development, which led me to learn a wide range of technologies, including React, Node.js, Express.js, MongoDB, and more. Throughout this process, I honed my skills in full-stack development and cloud infrastructure, preparing me for real-world challenges.</span>
-            <span className="inline-block mb-5 ">Thanks to Juno's guidance, I learned how to effectively showcase my projects, skills, and experiences, allowing me to connect with potential employers and ultimately land my dream role at Rose Rocket. It’s been an incredible journey of growth, both technically and professionally, and I’m excited to continue expanding my knowledge in infrastructure and backend systems.</span>
-            <span className="inline-block mb-5 ">I’m committed to continuously improving and contributing to innovative projects that push the boundaries of technology, while also sharing my story and helping others along the way.</span>
+          <p className="mt-4 max-w-2xl md:max-w-6xl mx-auto md:text-xl text-gray-500 text-left px-8">
+          I'm Asanga Emmanuel, a Junior Software Engineer (Infrastructure) at Xcelsz with a passion for building scalable, high-performance applications. I specialize in React, Node.js, Express.js, MongoDB, MySQL, and more, with a strong focus on optimizing systems and improving infrastructure.
+
+          At Xcelsz, I work on enhancing platform reliability and scalability while collaborating with cross-functional teams to solve complex challenges. I’m constantly learning, exploring new technologies, and pushing my skills to the next level.
+
+Let’s connect if you’re looking for an engineer who’s driven to create impactful, efficient solutions!
           </p>
-          <div className="mt-8 flex gap-10 pl-10 md:pl-44">
+          <div className="mt-8 flex gap-4 pl-10 md:pl-52">
             <img
               className=" mb-14 rounded-2xl w-40 h-60 md:w-80 md:h-96 object-cover shadow-lg hover:shadow-slate-500"
               src="/mole1.JPG"
               alt="Asanga Emmanuel"
             />
-          <Outlet />
+            <div className="">
+              <AboutNavbar/>
+              <Outlet />
+            </div>
           </div>
         </div>
-      </section>
-      </>
+   
     );
   };
   export default DetailedAboutme;
