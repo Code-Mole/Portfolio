@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-scroll';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -9,6 +10,8 @@ const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [themeIcon,setThemeIcon] = useState(false);
    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+   const navigate = useNavigate();
 
    useEffect(() => {
     if (theme === 'dark') {
@@ -28,6 +31,10 @@ const HamburgerMenu = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const goToProjects = () => {
+    navigate('/projects');
+  }
 
   
 
@@ -67,7 +74,7 @@ const HamburgerMenu = () => {
         >
           About
         </Link>
-        <a href="/projects"   className="text-2xl cursor-pointer hover:text-slate-600">Projects</a>
+        <button onClick={goToProjects}    className="text-2xl cursor-pointer hover:text-slate-600">Projects</button>
         <Link
           to="contact"
           smooth={true}

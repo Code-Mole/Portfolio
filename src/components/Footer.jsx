@@ -1,3 +1,5 @@
+
+import { Link } from 'react-scroll';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
@@ -5,12 +7,30 @@ import XIcon from '@mui/icons-material/X';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-200 text-gray-400 py-8">
-      <div className="container mx-auto text-center">
+    <footer className="  bg-slate-200 text-gray-400 py-8">
+      <div className="container  text-center">
         <div className="mb-4">
-          <a href="#about" className="px-3 hover:text-slate-600">About</a>
-          <a href="/projects" className="px-3 hover:text-slate-600">Projects</a>
-          <a href="#contact" className="px-3 hover:text-slate-600">Contact</a>
+        <Link to="about" 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70} 
+            duration={500}
+             className="px-3 hover:text-slate-600 cursor-pointer">about</Link>
+          <Link to="testimonials" 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70} 
+            duration={500}
+             className="px-3 hover:text-slate-600 cursor-pointer">testimonials</Link>
+          <Link to="contact" 
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70} 
+            duration={500}
+             className="px-3 hover:text-slate-600 cursor-pointer">Contact</Link>
         </div>
 
         <div className="flex justify-center space-x-6 mb-6">

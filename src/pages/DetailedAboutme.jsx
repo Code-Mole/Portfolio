@@ -23,7 +23,7 @@ const DetailedAboutme = () => {
     setThemeIcon(!themeIcon)
   };
     return (
-        <div className="container mx-auto shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative py-12">
+        <div className="   shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative py-12">
         <div className="px-10 md:px-28  flex justify-between items-center">
       <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110">Go Back</a>
       <div>
@@ -41,9 +41,9 @@ const DetailedAboutme = () => {
 
 Let’s connect if you’re looking for an engineer who’s driven to create impactful, efficient solutions!
           </p>
-          <div className="mt-8 flex gap-4 pl-10 md:pl-52">
+          <div className="mt-8 md:flex gap-4 pl-10 lg:pl-52">
             <img
-              className=" mb-14 rounded-2xl w-40 h-60 md:w-80 md:h-96 object-cover shadow-lg hover:shadow-slate-500"
+              className=" mb-14 mx-auto md:mx-0 rounded-2xl w-72 flex justify-center items-center  h-60 md:w-96 md:h-96 object-cover shadow-lg hover:shadow-slate-500"
               src="/mole1.JPG"
               alt="Asanga Emmanuel"
             />

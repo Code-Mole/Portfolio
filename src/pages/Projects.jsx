@@ -106,7 +106,7 @@ function Projects() {
   return (
    
         
-      <div className="container mx-auto ">
+      <div className="  ">
       <div  className="py-12 dark:bg-slate-900 bg-gray-100 md:px-12">
       <div className="px-10 md:px-28  flex justify-between items-center">
       <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110">Go Back</a>
