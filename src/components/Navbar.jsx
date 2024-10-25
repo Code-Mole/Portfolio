@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll';
+import { useNavigate } from 'react-router-dom';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { useState,useEffect } from 'react';
@@ -7,6 +8,8 @@ import HamburgerMenu from './HamburgerMenu.jsx';
 const Navbar = () => {
    const [themeIcon,setThemeIcon] = useState(false);
    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+   const navigate = useNavigate();
 
    useEffect(() => {
     if (theme === 'dark') {
@@ -22,6 +25,11 @@ const Navbar = () => {
     setThemeIcon(!themeIcon)
   };
 
+  const goToProjects = () => {
+    navigate('/projects');
+  }
+  
+
     return (
    
       <nav className=" bg-slate-200 dark:bg--600 p-4 fixed w-full md:px-40 z-10  ">
@@ -36,7 +44,7 @@ const Navbar = () => {
             className="text-gray-400 hover:text-slate-600 active:text-violet-700 cursor-pointer">Code-Mole</Link></a></div>
           <HamburgerMenu />
           <div className="hidden md:flex space-x-4">
-          <a href='/'>
+         
             <Link to="hereSection" 
             activeClass="active"
             spy={true}
@@ -44,24 +52,24 @@ const Navbar = () => {
             offset={-70} 
             duration={500}
             className="text-gray-400 hover:text-slate-600 active:text-violet-700 cursor-pointer">Home</Link>
-            </a>
-            <a href="/about"  >
+         
+          
               <Link to="about" 
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
               className="text-gray-400 hover:text-slate-600 cursor-pointer">About</Link>
-           </a>
-            <a href="/projects"   className="text-gray-400 hover:text-slate-600">Projects</a>
-            <a href='/contact'>
+          
+            <button onClick={goToProjects}    className="text-gray-400 hover:text-slate-600">Projects</button>
+            
             <Link to="contact"  
              spy={true}
              smooth={true}
              offset={-70}
              duration={500}
             className="text-gray-400 hover:text-slate-600 cursor-pointer">Contact</Link>
-            </a>
+          
           {
             themeIcon ? <DarkModeIcon onClick={toggleTheme} className="text-gray-900 hover:text-slate-600"/> : <LightModeIcon onClick={toggleTheme} className="text-yellow-400 hover:text-slate-600"/>
           }

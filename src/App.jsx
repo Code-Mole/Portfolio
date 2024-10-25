@@ -7,6 +7,7 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import Education from "./components/Education.jsx";
 import Expirence from "./components/Expirence.jsx";
+import NotFoundPage from "./components/NotFoundPage.jsx";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         </Route> 
         <Route path="/projects" element={<Projects />} /> 
         <Route path="/contact" element={<Contact />} /> 
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </Router>
     <Footer/>

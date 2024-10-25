@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
+
 const About = () => {
+const navigate = useNavigate();
+
+const goToAbout = () => {
+  navigate("/about");
+}
+
     return (
       <section id="about" className="py-12  text-center">
         <div className="container mx-auto shadow-lg rounded-lg dark:bg-slate-800  bg-gray-100 relative">
@@ -19,8 +28,8 @@ const About = () => {
           </div>
           <div className=" h-12
            animate-bounce">
-          <a href="/about" className=" ml-4 px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white
-           transition-all relative bottom-10 ">Learn more About Me</a>
+          <button onClick={goToAbout} className=" ml-4 px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white
+           transition-all relative bottom-10 ">Learn more About Me</button>
           </div>
         </div>
       </section>
