@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import AboutNavbar from "../components/AboutNavbar";
+import WestIcon from '@mui/icons-material/West';
 
 const DetailedAboutme = () => {
 
@@ -25,7 +26,12 @@ const DetailedAboutme = () => {
     return (
         <div className="   shadow-lg rounded-lg dark:bg-slate-900  bg-gray-100 relative py-12">
         <div className="px-10 md:px-28  flex justify-between items-center">
-      <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110">Go Back</a>
+          
+
+      <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110 flex justify-center items-center gap-2">          <WestIcon className="md:text-2xl 
+      text-ms
+      text-blue-600 transition hover:scale-110 hover:text-slate-400"/> Go Back</a>
+        
       <div>
       {
             themeIcon ? <DarkModeIcon onClick={toggleTheme} className="text-gray-900 hover:text-slate-600"/> : <LightModeIcon onClick={toggleTheme} className="text-yellow-400 hover:text-slate-600"/>

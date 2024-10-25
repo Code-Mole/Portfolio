@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import ProjectCard from "../components/ProjectCard.jsx"
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import WestIcon from '@mui/icons-material/West';
 
 function Projects() {
 
@@ -109,7 +110,9 @@ function Projects() {
       <div className="  ">
       <div  className="py-12 dark:bg-slate-900 bg-gray-100 md:px-12">
       <div className="px-10 md:px-28  flex justify-between items-center">
-      <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110">Go Back</a>
+      <a href="/" className="dark:text-slate-400 md:text-2xl  transition hover:scale-110 flex justify-center items-center gap-2">          <WestIcon className="md:text-2xl 
+      text-ms
+      text-blue-600 transition hover:scale-110 hover:text-slate-400"/> Go Back</a>
       <div>
       {
             themeIcon ? <DarkModeIcon onClick={toggleTheme} className="text-gray-900 hover:text-slate-600"/> : <LightModeIcon onClick={toggleTheme} className="text-yellow-400 hover:text-slate-600"/>
@@ -117,6 +120,7 @@ function Projects() {
       </div>
       </div>
         <h2 className="text-3xl font-bold text-center dark:text-slate-500">Projects</h2>
+        <p className="text-center dark:text-slate-400 w-[90%] md:w-[70%] mx-auto mt-4 text-gray-700 py-5">Throughout my software engineering journey, I’ve developed a range of projects that highlight my skills in full-stack development, infrastructure optimization, and building applications with a strong user focus.</p>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} project={project} />

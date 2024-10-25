@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
+ const navigate = useNavigate();
 
   const professions = ["Web Developer", "UI/UX Designer", "Backend Developer", "Full Stack Developer", " Frontend Developer","Mobile App Developer","Graphic Designer"];
   
@@ -14,6 +16,10 @@ const HeroSection = () => {
 
     return () => clearInterval(professionInterval);
   }, [professions.length]);
+
+  const goToProjects = () => {
+    navigate("/projects");
+  }
   return (
     <section id="hereSection" className="mt-28">
       <div className="h-screen bg-gray-100 dark:bg-slate-800 shadow-lg rounded-lg  flex flex-col gap-14 md:flex-row items-center justify-center text-center">
@@ -24,7 +30,7 @@ const HeroSection = () => {
       I craft innovative, scalable digital solutions designed to optimize business performance and elevate user engagement. My expertise ensures seamless integration of functionality and design, delivering measurable results that drive growth and efficiency.
       </p>
       <div className="mt-8">
-        <a href="/projects" className="px-2 md:px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">View My Work</a>
+        <button onClick={goToProjects} className="px-2 md:px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600">View My Work</button>
         <a href="#contact" className=" ml-2 px-2 md:px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white ">Hire Me</a>
         <a href="/moleResume.pdf" className="px-2 md:px-6 py-3 bg-blue-500 text-white rounded-lg shadow-md ml-2 hover:bg-blue-600">Download CV</a>
       </div></div>
